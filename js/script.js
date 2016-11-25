@@ -104,7 +104,7 @@ function buildAndShowHomeHTML (categories) {
       // var chosenCategoryShortName = ....
       
       
-      var chooseRandomCategory = {};
+      chooseRandomCategory = {};
       
 
 
