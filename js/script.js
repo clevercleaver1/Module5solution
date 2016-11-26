@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  var obj = JSON.parse(buildAndShowHomeHTML);, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  insertHtml("#main-content", buildAndShowHomeHTML);, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -120,9 +120,6 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      
-      // Return substitute of '{{propName}}'
-// with propValue in given 'string'
 var homeHtmlToInsertIntoMainPage = function (string, chosenCategoryShortName, randomCategoryShortName) {
   var propToReplace = "{{" + chosenCategoryShortName + "}}";
   string = string
